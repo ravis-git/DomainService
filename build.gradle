@@ -1,0 +1,21 @@
+buildscript {
+    ext {
+//        springBootVersion = '1.5.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.my.experiments.microservices.chassis.plugins:MicroservicesChassis:0.0.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'chassis.plugin'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}

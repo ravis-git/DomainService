@@ -1,0 +1,14 @@
+{
+  "id": "domain-service",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8080, "hostPort": 0 }
+      ]
+    },
+    "volumes": []
+  }
+}

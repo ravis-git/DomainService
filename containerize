@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+docker stop $(docker ps -a -q --filter="ancestor=rpalakodeti/domain-service")
+docker rm $(docker ps -a -q --filter="ancestor=rpalakodeti/domain-service") -f
+
+docker build -t rpalakodeti/domain-service .
+docker run -d -p 8080:8080 rpalakodeti/domain-service
+docker logs -f $(docker ps -a -q --filter="ancestor=rpalakodeti/domain-service")
